@@ -25,6 +25,7 @@ namespace Progra_web_3_Tp_final.Controllers
 
         public IActionResult Privacy()
         {
+            System.Diagnostics.Debug.WriteLine("Prueba");
             return View();
         }
 

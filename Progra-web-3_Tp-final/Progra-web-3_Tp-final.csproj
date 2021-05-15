@@ -5,4 +5,7 @@
     <RootNamespace>Progra_web_3_Tp_final</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Clientes\" />
+  </ItemGroup>
 </Project>
