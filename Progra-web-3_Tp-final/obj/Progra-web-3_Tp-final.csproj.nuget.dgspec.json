@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Windows 10\\source\\repos\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj": {}
+    "C:\\Users\\andrea_descous\\Desktop\\Varios\\Universidad\\PW3\\Progra-web-3\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Windows 10\\source\\repos\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj": {
+    "C:\\Users\\andrea_descous\\Desktop\\Varios\\Universidad\\PW3\\Progra-web-3\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows 10\\source\\repos\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj",
+        "projectUniqueName": "C:\\Users\\andrea_descous\\Desktop\\Varios\\Universidad\\PW3\\Progra-web-3\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj",
         "projectName": "Progra-web-3_Tp-final",
-        "projectPath": "C:\\Users\\Windows 10\\source\\repos\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj",
-        "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows 10\\source\\repos\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final\\obj\\",
+        "projectPath": "C:\\Users\\andrea_descous\\Desktop\\Varios\\Universidad\\PW3\\Progra-web-3\\Progra-web-3_Tp-final\\Progra-web-3_Tp-final.csproj",
+        "packagesPath": "C:\\Users\\andrea_descous\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andrea_descous\\Desktop\\Varios\\Universidad\\PW3\\Progra-web-3\\Progra-web-3_Tp-final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andrea_descous\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
