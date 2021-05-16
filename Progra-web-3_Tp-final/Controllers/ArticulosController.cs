@@ -12,5 +12,11 @@ namespace Progra_web_3_Tp_final.Controllers
         {
             return View();
         }
+
+        public IActionResult NuevoArticulo()
+        {
+            return View();
+        }
+
     }
 }
