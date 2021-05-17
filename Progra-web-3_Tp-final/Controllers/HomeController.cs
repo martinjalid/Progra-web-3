@@ -29,10 +29,6 @@ namespace Progra_web_3_Tp_final.Controllers
             return View();
         }
 
-        public IActionResult Pedidos()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
