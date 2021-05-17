@@ -8,9 +8,13 @@
         <input type="text" class="form-control col-lg-3" id="descrip_art" placeholder="Descripción">
     </div>
 
-    <div class="text-center mt-4">
+    <div class="text-center mt-4 d-flex justify-content-around">
         <button type="button" class="btn btn-success">Guardar</button>
         <button type="button" class="btn btn-success">Guardar y crear otro</button>
-        <button type="button" class="btn btn-danger">Cancelar</button>
+        <div>
+            <form action="../../Articulos" method="post">
+                <button type="submit" class="btn btn-danger">Cancelar</button>
+            </form>
+        </div>
     </div>
 </div>
