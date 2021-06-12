@@ -2,13 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 <link rel="stylesheet" href="~/css/pedidos.css" />
-<script src="~/js/clientes.js"></script>
+<script src="~/js/pedidos.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
- 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
 <div class="text-center">
     <div class="pedidos-filters">
-        <button type="button" > Nuevo Pedido</button>
+        <form action="../../Pedidos/NuevoPedido" method="post">
+            <button type="submit" class="btn btn-success">Nuevo Pedido</button>
+        </form>
         <div class="filtros">
             <select aria-label="Default select example">
                 <option selected>Cliente</option>
@@ -30,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <table id="example" class="table table-striped" style="width:100%">
+        <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>Pedido</th>
