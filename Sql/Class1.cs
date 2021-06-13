@@ -1,8 +1,0 @@
-﻿using System;
-
-namespace Sql
-{
-    public class Class1
-    {
-    }
-}
