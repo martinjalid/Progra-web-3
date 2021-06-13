@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Progra_web_3_Tp_final.Models.Articulo>
+@{
     ViewData["Title"] = "Home Page";
 }
 <link rel="stylesheet" href="~/css/articulos.css" />
@@ -29,85 +30,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
+                @foreach (var art in Model)
+                {
+               <tr>
+                    <td>@art.Descripcion</td>
+                    <td>@art.Codigo</td>
+                    <td>@art.Codigo</td>
+                    <td>@art.Codigo</td>
                 </tr>
-                <tr>
-                    <td>Tornillo</td>
-                    <td>1000/03</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Tuerca</td>
-                    <td>1000/02</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Tuerca</td>
-                    <td>1000/02</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-                <tr>
-                    <td>Rosca</td>
-                    <td>1000/01</td>
-                    <td>Ver</td>
-                    <td>Eliminar</td>
-                </tr>
-
+                }
             </tbody>
             <tfoot>
                 <tr>
