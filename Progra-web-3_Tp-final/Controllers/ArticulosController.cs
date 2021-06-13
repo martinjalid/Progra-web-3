@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Progra_web_3_Tp_final.Models;
+using Progra_web_3_Tp_final.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +10,41 @@ namespace Progra_web_3_Tp_final.Controllers
 {
     public class ArticulosController : Controller
     {
-        public IActionResult Index()
+        _20211CTPContext context;
+        private IArticulosServicio _articulosServicio;
+
+        public ArticulosController()
         {
-            return View();
+            context = new _20211CTPContext();
+            _articulosServicio = new ArticulosServicio(context);
         }
 
-        public IActionResult NuevoArticulo()
+        public IActionResult Index()
+        {
+            return View(context.Articulos.ToList());
+        }
+
+        
+        public ActionResult NuevoArticulo()
         {
             return View();
         }
+       
+       public ActionResult Alta(Articulo art)
+        {
+            _articulosServicio.Alta(art);
+            return Redirect("/Articulos");
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            Articulo art = _articulosServicio.ObtenerPorId(id);
+            _articulosServicio.Eliminar(art);
+            return Redirect("/Articulos");
+        }
+
+
+
 
     }
 }
