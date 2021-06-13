@@ -9,6 +9,9 @@ namespace Progra_web_3_Tp_final.Servicios
 {
     interface IArticulosServicio
     {
+        Articulo ObtenerPorId(int id);
         void Alta(Articulo art);
+
+        void Eliminar(Articulo art);
     }
 }

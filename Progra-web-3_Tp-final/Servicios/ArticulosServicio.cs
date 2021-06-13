@@ -12,10 +12,23 @@ namespace Progra_web_3_Tp_final.Servicios
             _dbContext = new _20211CTPContext();
         }
 
+        public Articulo ObtenerPorId(int id)
+        {
+            return _dbContext.Articulos.Find(id);
+        }
+
         public void Alta(Articulo art)
         {
             _dbContext.Articulos.Add(art);
             _dbContext.SaveChanges();
         }
+
+        public void Eliminar(Articulo art)
+        {
+            _dbContext.Articulos.Remove(art);
+            _dbContext.SaveChanges();
+        }
+
+ 
     }
 }

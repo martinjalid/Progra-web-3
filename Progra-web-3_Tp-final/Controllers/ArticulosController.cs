@@ -36,6 +36,15 @@ namespace Progra_web_3_Tp_final.Controllers
             return Redirect("/Articulos");
         }
 
+        public ActionResult Eliminar(int id)
+        {
+            Articulo art = _articulosServicio.ObtenerPorId(id);
+            _articulosServicio.Eliminar(art);
+            return Redirect("/Articulos");
+        }
+
+
+
 
     }
 }
