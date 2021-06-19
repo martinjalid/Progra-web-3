@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Session;
 using Microsoft.Extensions.Logging;
 using Progra_web_3_Tp_final.Models;
 using System;
@@ -35,5 +36,7 @@ namespace Progra_web_3_Tp_final.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+       
     }
 }
