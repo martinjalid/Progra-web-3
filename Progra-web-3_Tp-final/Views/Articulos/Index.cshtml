@@ -31,14 +31,17 @@
             </thead>
             <tbody>
                 @foreach (var art in Model)
-                {
-                    <tr>
-                        <td>@art.Descripcion</td>
-                        <td>@art.Codigo</td>
-                        <td>Ver</td>
-                        <td><a href="../../Articulos/Eliminar/@art.IdArticulo">Eliminar</a></td>
-                    </tr>
-                }
+                    if (art.FechaBorrado == null)
+                    {
+                        {
+                            <tr>
+                                <td>@art.Descripcion</td>
+                                <td>@art.Codigo</td>
+                                <td>Ver</td>
+                                <td><a href="../../Articulos/Eliminar/@art.IdArticulo">Eliminar</a></td>
+                            </tr>
+                        }
+                    }
             </tbody>
         </table>
     </div>
