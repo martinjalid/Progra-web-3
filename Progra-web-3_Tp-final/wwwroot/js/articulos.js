@@ -97,3 +97,12 @@ function crear() {
         'success'
     )
 };
+
+
+function editar() {
+    Swal.fire(
+        'Articulo *DESCRIPCION* modificado con éxito',
+        'Haga click para continuar',
+        'success'
+    )
+};

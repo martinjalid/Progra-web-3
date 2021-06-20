@@ -38,7 +38,11 @@
                             <tr>
                                 <td>@art.Descripcion</td>
                                 <td>@art.Codigo</td>
-                                <td>Ver</td>
+                                <td>
+                                    <form action="../../Articulos/EditarArticulo/@art.IdArticulo">
+                                        <button class="btn btn-info">Ver</button>
+                                    </form>
+                                </td>
                                 <td>
                                     <form action="../../Articulos/Eliminar/@art.IdArticulo" method="post">
                                     <button type="submit" onclick="eliminar()" class="btn btn-danger">Eliminar</button>
