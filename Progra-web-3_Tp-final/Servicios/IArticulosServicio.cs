@@ -11,7 +11,7 @@ namespace Progra_web_3_Tp_final.Servicios
     {
         Articulo ObtenerPorId(int id);
         void Alta(Articulo art);
-
+        void Modificar(Articulo art);
         void Eliminar(Articulo art);
     }
 }

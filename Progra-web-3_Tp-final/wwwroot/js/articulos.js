@@ -66,4 +66,43 @@ function filtro_codigo() {
             }
         }
     }
-}
+};
+
+
+function eliminar() {
+    Swal.fire({
+        title: 'Esta seguro que desea eliminar el articulo *NOMBRE*',
+        text: "Esta acción no se podrá revertir",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado!',
+                'El articulo ha sido borrado',
+                'success'
+            )
+        }
+    })
+};
+
+
+function crear() {
+    Swal.fire(
+        'Articulo *DESCRIPCION* creado con éxito',
+        'Haga click para continuar',
+        'success'
+    )
+};
+
+
+function editar() {
+    Swal.fire(
+        'Articulo *DESCRIPCION* modificado con éxito',
+        'Haga click para continuar',
+        'success'
+    )
+};

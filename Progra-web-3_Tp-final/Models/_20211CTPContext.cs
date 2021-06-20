@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -242,6 +243,19 @@ namespace Progra_web_3_Tp_final.Models
             });
 
             OnModelCreatingPartial(modelBuilder);
+        }
+
+        public override int SaveChanges()
+        {
+            foreach (var item in ChangeTracker.Entries()
+                .Where(e => e.State == EntityState.Deleted &&
+                    e.Metadata.GetProperties().Any(x => x.Name == "FechaBorrado")))
+            {
+                item.State = EntityState.Unchanged;
+                item.CurrentValues["FechaBorrado"] = DateTime.Now;
+            }
+
+            return base.SaveChanges();
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

@@ -23,12 +23,20 @@ namespace Progra_web_3_Tp_final.Servicios
             _dbContext.SaveChanges();
         }
 
+        public void Modificar(Articulo art)
+        {
+            Articulo artNuevo = ObtenerPorId(art.IdArticulo);
+            artNuevo.Codigo = art.Codigo;
+            artNuevo.Descripcion = art.Descripcion;
+            _dbContext.SaveChanges();
+        }
+
         public void Eliminar(Articulo art)
         {
             _dbContext.Articulos.Remove(art);
             _dbContext.SaveChanges();
         }
 
- 
+
     }
 }
