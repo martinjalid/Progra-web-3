@@ -60,13 +60,22 @@ namespace Progra_web_3_Tp_final.Controllers
             return View();
         }
 
-      /*  public ActionResult EditarUsuario(int id)
+        /*  public ActionResult EditarUsuario(int id)
+          {
+              Usuario user = _usuariosServicio.ObtenerPorId(id);
+              _usuariosServicio.EditarUsuario(user);
+              return Redirect("/Usuarios/EditarUsuario");
+          }
+        */
+        /*public ActionResult EliminarUsuario(int id)
         {
             Usuario user = _usuariosServicio.ObtenerPorId(id);
-            _usuariosServicio.EditarUsuario(user);
-            return Redirect("/Usuarios/EditarUsuario");
+            _usuariosServicio.EliminarUsuario(user);
+            return Redirect("/Usuario");
         }
-      */
+        */
+
+
 
     }
 }

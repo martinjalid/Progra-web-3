@@ -13,6 +13,6 @@ namespace Progra_web_3_Tp_final.Servicios
         void CrearNuevo(Usuario user);
 
         void EditarUsuario(Usuario user);
-
+        
     }           
 }
