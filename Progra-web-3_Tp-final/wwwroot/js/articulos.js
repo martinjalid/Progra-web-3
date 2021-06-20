@@ -88,3 +88,12 @@ function eliminar() {
         }
     })
 };
+
+
+function crear() {
+    Swal.fire(
+        'Articulo *DESCRIPCION* creado con éxito',
+        'Haga click para continuar',
+        'success'
+    )
+};

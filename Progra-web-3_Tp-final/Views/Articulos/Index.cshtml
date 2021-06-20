@@ -39,7 +39,11 @@
                                 <td>@art.Descripcion</td>
                                 <td>@art.Codigo</td>
                                 <td>Ver</td>
-                                <td><a href="../../Articulos/Eliminar/@art.IdArticulo" onclick="eliminar()">Eliminar</a></td>
+                                <td>
+                                    <form action="../../Articulos/Eliminar/@art.IdArticulo" method="post">
+                                    <button type="submit" onclick="eliminar()" class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                </td>
                             </tr>
                         }
                     }
