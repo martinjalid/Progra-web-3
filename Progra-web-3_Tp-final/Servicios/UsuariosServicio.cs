@@ -35,5 +35,12 @@ namespace Progra_web_3_Tp_final.Servicios
             _dbContext.SaveChanges();
         }
 
+        public void Eliminar(Usuario user)
+        {
+            _dbContext.Usuarios.Remove(user);
+            _dbContext.SaveChanges();
+        }
+
+
     }
 }

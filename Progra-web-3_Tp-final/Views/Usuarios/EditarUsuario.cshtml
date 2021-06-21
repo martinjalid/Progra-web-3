@@ -29,14 +29,24 @@
         </div>
 
         <button type="submit" class="btn btn-success mt-2" onclick="editar()">Modificar</button>
+
+
     </form>
 
+
     <div class="text-center mt-2 d-flex">
-    
-        <div>
-            <form action="../../Usuarios" method="post">
-                <button type="submit" class="btn btn-danger">Cancelar</button>
-            </form>
-        </div>
+
+        <form action="../../Usuarios/Eliminar/@Model.IdUsuario" method="post">
+            <button type="submit" onclick="eliminar()" class="btn btn-danger">Eliminar</button>
+        </form>
     </div>
-</div>
+     
+    <div class="text-center mt-2 d-flex">
+
+            <div>
+                <form action="../../Usuarios" method="post">
+                    <button type="submit" class="btn btn-danger">Cancelar</button>
+                </form>
+           
+    </div>
+    </div>

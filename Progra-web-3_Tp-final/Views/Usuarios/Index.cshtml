@@ -34,7 +34,6 @@
                     <th>Email</th>
                     <th>Fecha Último Login</th>
                     <th>Ver</th>
-                    <th>Editar</th>
                 </tr>
             </thead>
 
@@ -42,13 +41,16 @@
                 @foreach (var user in Model)
                 {
 
-                    <tr>
-                        <td>@user.Nombre</td>
-                        <td>@user.Email</td>
-                        <td>@user.FechaUltLogin</td>
-                        <td><a href="">Ver</a></td>
-                        <td><a href="../../Usuarios/EditarUsuario/@user.IdUsuario">Editar</a></td>
-                    </tr>
+                <tr>
+                    <td>@user.Nombre</td>
+                    <td>@user.Email</td>
+                    <td>@user.FechaUltLogin</td>
+                    <td>
+                        <form action="../../Usuarios/EditarUsuario/@user.IdUsuario">
+                            <button class="btn btn-info">Ver</button>
+                        </form>
+                    </td>
+                </tr>
                 }
 
             </tbody>

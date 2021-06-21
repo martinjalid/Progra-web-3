@@ -66,6 +66,12 @@ namespace Progra_web_3_Tp_final.Controllers
               _usuariosServicio.ModificarUsuario(user);
               return Redirect("/Usuarios");
           }
-        
-       }
+        public ActionResult Eliminar(int id)
+        {
+            Usuario user = _usuariosServicio.ObtenerPorId(id);
+            _usuariosServicio.Eliminar(user);
+            return Redirect("/Usuarios");
+        }
+
+    }
 }
