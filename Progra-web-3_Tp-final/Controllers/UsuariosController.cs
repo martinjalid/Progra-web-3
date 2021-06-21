@@ -13,7 +13,7 @@ namespace Progra_web_3_Tp_final.Controllers
     {
         _20211CTPContext context;
         private IUsuariosServicio _usuariosServicio;
-
+    
 
         public UsuariosController()
         {
@@ -55,27 +55,17 @@ namespace Progra_web_3_Tp_final.Controllers
             }
             return Redirect("/Usuarios");
         }
-        public IActionResult EditarUsuario()
-        {
-            return View();
-        }
-
-        /*  public ActionResult EditarUsuario(int id)
-          {
-              Usuario user = _usuariosServicio.ObtenerPorId(id);
-              _usuariosServicio.EditarUsuario(user);
-              return Redirect("/Usuarios/EditarUsuario");
-          }
-        */
-        /*public ActionResult EliminarUsuario(int id)
+        public IActionResult EditarUsuario(int id)
         {
             Usuario user = _usuariosServicio.ObtenerPorId(id);
-            _usuariosServicio.EliminarUsuario(user);
-            return Redirect("/Usuario");
+            return View(user);
         }
-        */
-
-
-
-    }
+        [HttpPost]
+        public ActionResult EditarUsuario(Usuario user)
+          {
+              _usuariosServicio.ModificarUsuario(user);
+              return Redirect("/Usuarios");
+          }
+        
+       }
 }
