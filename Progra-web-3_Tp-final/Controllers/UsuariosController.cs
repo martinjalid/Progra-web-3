@@ -58,6 +58,7 @@ namespace Progra_web_3_Tp_final.Controllers
         public IActionResult EditarUsuario(int id)
         {
             Usuario user = _usuariosServicio.ObtenerPorId(id);
+            return View(user); 
             return View(user);
         }
         [HttpPost]

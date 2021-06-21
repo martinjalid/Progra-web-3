@@ -10,20 +10,20 @@
 
     <form action="../../Usuarios/CrearNuevo" method="post">
         <div>
-            <input type="text" class="form-control col-lg-3" id="email_user" name="Email" placeholder="Ingrese Email">
-            <input type="password" class="form-control col-lg-3" id="password_user" name="Password" placeholder="Ingrese Contraseña">
-            <label class="form-check-label col-lg-9" for="es_admin">Es administrador</label>
+            <input type="text" class="form-control col-lg-3 m-2" id="email_user" name="Email" placeholder="Ingrese Email">
+            <input type="password" class="form-control col-lg-3 m-2" id="password_user" name="Password" placeholder="Ingrese Contraseña">
+            <label class="form-check-label col-lg-9 m-2" for="es_admin">Es administrador</label>
             <input type="checkbox" class="form-check-input" id="marca_user" name="AdminCheck" placeholder="Es administrador">
-            <input type="text" class="form-control col-lg-3" id="nombre_user" name="Nombre" placeholder="Ingrese Nombre">
-            <input type="text" class="form-control col-lg-3" id="apellido_user" name="Apellido" placeholder="Ingrese Apellido">
-            <input type="text" class="form-control col-lg-3" id="telefono_user" name="Telefono" placeholder="Ingrese Telefono">
-            <input type="date" class="form-control col-lg-3" id="fecha_nacimiento_user" name="Fecha de Nacimiento" placeholder="Ingrese Fecha de nacimiento">
+            <input type="text" class="form-control col-lg-3 m-2" id="nombre_user" name="Nombre" placeholder="Ingrese Nombre">
+            <input type="text" class="form-control col-lg-3 m-2" id="apellido_user" name="Apellido" placeholder="Ingrese Apellido">
+            <input type="text" class="form-control col-lg-3 m-2" id="telefono_user" name="Telefono" placeholder="Ingrese Telefono">
+            <input type="date" class="form-control col-lg-3 m-2" id="fecha_nacimiento_user" name="Fecha de Nacimiento" placeholder="Ingrese Fecha de nacimiento">
         </div>
-        <button type="submit" class="btn btn-success mt-2" onclick="crear()">Guardar</button>
+        <button type="submit" class="btn btn-success m-2" onclick="crear()">Guardar</button>
     </form>
     
         <div class="text-center mt-2 d-flex">
-            <button type="button" class="btn btn-success mr-2">Guardar y crear otro</button>
+            <button type="button" class="btn btn-success m-2">Guardar y crear otro</button>
             <div>
                 <form action="../../Usuarios" method="post">
                     <button type="submit" class="btn btn-danger">Cancelar</button>

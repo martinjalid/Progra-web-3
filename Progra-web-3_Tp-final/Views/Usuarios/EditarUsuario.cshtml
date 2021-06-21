@@ -13,22 +13,21 @@
         <input type="hidden" name="IdUsuario" value="@Model.IdUsuario" />
         <div>
 
-            <input type="text" class="form-control col-lg-3" id="email_user" name="Email" placeholder="Ingrese Email" value="@Model.Email">
+            <input type="text" class="form-control col-lg-3 m-2" id="email_user" name="Email" placeholder="Ingrese Email" value="@Model.Email">
 
-            <input type="password" class="form-control col-lg-3" id="password_user" name="Password" placeholder="Ingrese Contraseña" value="@Model.Password">
-
-            <label class="form-check-label col-lg-9" for="excluir_eliminados">Es administrador</label>
-
+            <input type="password" class="form-control col-lg-3 m-2" id="password_user" name="Password" placeholder="Ingrese Contraseña" value="@Model.Password">
+            <div class="form-check-label col-lg-9">
+            <label class="form-check-label col-lg-3" for="es_admin">Es administrador</label>
             <input type="checkbox" class="form-check-input" id="marca_user" name="AdminCheck" placeholder="Es administrador" value="@Model.EsAdmin">
+            </div>
+            <input type="text" class="form-control col-lg-3 m-2" id="nombre_user" name="Nombre" placeholder="Ingrese Nombre" value="@Model.Nombre">
 
-            <input type="text" class="form-control col-lg-3" id="nombre_user" name="Nombre" placeholder="Ingrese Nombre" value="@Model.Nombre">
+            <input type="text" class="form-control col-lg-3 m-2" id="apellido_user" name="Apellido" placeholder="Ingrese Apellido" value="@Model.Apellido">
 
-            <input type="text" class="form-control col-lg-3" id="apellido_user" name="Apellido" placeholder="Ingrese Apellido" value="@Model.Apellido">
-
-            <input type="date" class="form-control col-lg-3" id="fecha_nacimiento_user" name="Fecha de Nacimiento" placeholder="Ingrese Fecha de nacimiento" value="@Model.FechaNacimiento">
+            <input type="date" class="form-control col-lg-3 m-2" id="fecha_nacimiento_user" name="Fecha de Nacimiento" placeholder="Ingrese Fecha de nacimiento" value="@Model.FechaNacimiento">
         </div>
 
-        <button type="submit" class="btn btn-success mt-2" onclick="editar()">Modificar</button>
+        <button type="submit" class="btn btn-success m-2" onclick="editar()">Modificar</button>
 
 
     </form>
@@ -37,7 +36,7 @@
     <div class="text-center mt-2 d-flex">
 
         <form action="../../Usuarios/Eliminar/@Model.IdUsuario" method="post">
-            <button type="submit" onclick="eliminar()" class="btn btn-danger">Eliminar</button>
+            <button type="submit" onclick="eliminar()" class="btn btn-danger m-2">Eliminar</button>
         </form>
     </div>
      
@@ -45,7 +44,7 @@
 
             <div>
                 <form action="../../Usuarios" method="post">
-                    <button type="submit" class="btn btn-danger">Cancelar</button>
+                    <button type="submit" class="btn btn-danger m-2">Cancelar</button>
                 </form>
            
     </div>
