@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/clientes.css" />
+<script src="~/js/clientes.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
+<div class="text-center">
+    <h3>Nuevo Cliente</h3>
+    <form class="clientes-form">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="nombre" placeholder="Nombre">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="numero" placeholder="Numero">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="telefono" placeholder="Telefono">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="email" placeholder="Email">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="direccion" placeholder="Direccion">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="cuit" placeholder="CUIT">
+    </form>
+    <button type="button" id="guardar" class="btn btn-success">Guardar</button>
+    <button type="button" id="guardar_y_limpiar" class="btn btn-success">Guardar y crear otro</button>
+    <button type="button" class="btn btn-danger">
+        <a href="/Clientes">Cancelar</a>
+    </button>
+</div>
