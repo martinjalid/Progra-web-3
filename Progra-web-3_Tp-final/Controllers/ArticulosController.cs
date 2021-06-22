@@ -36,6 +36,19 @@ namespace Progra_web_3_Tp_final.Controllers
             return Redirect("/Articulos");
         }
 
+        public ActionResult EditarArticulo(int id)
+        {
+            Articulo art = _articulosServicio.ObtenerPorId(id);
+            return View(art);
+        }
+
+        [HttpPost]
+       public ActionResult EditarArticulo(Articulo art)
+        {
+            _articulosServicio.Modificar(art);
+            return Redirect("/Articulos");
+        }
+
         public ActionResult Eliminar(int id)
         {
             Articulo art = _articulosServicio.ObtenerPorId(id);

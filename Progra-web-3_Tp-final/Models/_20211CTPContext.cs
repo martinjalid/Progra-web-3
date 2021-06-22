@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -28,8 +29,9 @@ namespace Progra_web_3_Tp_final.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=2021-1C-TP;User=sa;Password=qwertY12@3;");
-                //optionsBuilder.UseSqlServer("Server=DESKTOP-KJ93ABG\\SQLEXPRESS;Database=2021-1C-TP;Trusted_Connection=True;");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+               // _ = optionsBuilder.UseSqlServer("Server=DESKTOP-T8Q8T2L\\SQLEXPRESS;Database=2021-1C-TP;Trusted_Connection=True;");
+                 _ = optionsBuilder.UseSqlServer("Server=DESKTOP-T8Q8T2L;Database=2021-1C-TP;Trusted_Connection=True;");
             }
         }
 
@@ -243,6 +245,19 @@ namespace Progra_web_3_Tp_final.Models
             });
 
             OnModelCreatingPartial(modelBuilder);
+        }
+
+        public override int SaveChanges()
+        {
+            foreach (var item in ChangeTracker.Entries()
+                .Where(e => e.State == EntityState.Deleted &&
+                    e.Metadata.GetProperties().Any(x => x.Name == "FechaBorrado")))
+            {
+                item.State = EntityState.Unchanged;
+                item.CurrentValues["FechaBorrado"] = DateTime.Now;
+            }
+
+            return base.SaveChanges();
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

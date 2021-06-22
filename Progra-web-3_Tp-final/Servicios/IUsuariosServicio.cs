@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Progra_web_3_Tp_final.Servicios
 {
-    interface IArticulosServicio
+    interface IUsuariosServicio
     {
-        Articulo ObtenerPorId(int id);
-        void Alta(Articulo art);
-        void Modificar(Articulo art);
-        void Eliminar(Articulo art);
-    }
+        Usuario ObtenerPorId(int id);
+        void CrearNuevo(Usuario user);
+
+        void EditarUsuario(Usuario user);
+        
+    }           
 }
