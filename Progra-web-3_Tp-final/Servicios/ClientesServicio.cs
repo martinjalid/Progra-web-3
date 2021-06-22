@@ -17,6 +17,11 @@ namespace Progra_web_3_Tp_final.Servicios
             return _dbContext.Clientes.Find(id);
         }
 
+        //public Cliente ObtenerPorNumero(int numero)
+        //{
+        //    return _dbContext.Clientes(c => c.Numero == numero);
+        //}
+
         public void Alta(Cliente cliente)
         {
             _dbContext.Clientes.Add(cliente);
@@ -28,5 +33,7 @@ namespace Progra_web_3_Tp_final.Servicios
             _dbContext.Clientes.Remove(cliente);
             _dbContext.SaveChanges();
         }
+
+
     }
 }

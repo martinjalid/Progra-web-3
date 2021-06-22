@@ -31,8 +31,13 @@ namespace Progra_web_3_Tp_final.Controllers
 
         public ActionResult Alta(Cliente cliente)
         {
-            _clienteServicio.Alta(cliente);
-            return Redirect("/Articulos");
+             _clienteServicio.Alta(cliente);
+            return Redirect("/Clientes");
+        }
+
+        public Boolean ExisteNumero(int numero)
+        {
+            return false;
         }
     }
 }
