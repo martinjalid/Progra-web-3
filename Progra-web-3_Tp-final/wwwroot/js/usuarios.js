@@ -22,7 +22,7 @@
     });
 
 });
-
+/*
 function filtro_usuario() {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
@@ -43,9 +43,9 @@ function filtro_usuario() {
             }
         }
     }
-};
+};*/
 
-
+/*
 function filtro_codigo() {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
@@ -66,4 +66,20 @@ function filtro_codigo() {
             }
         }
     }
-}
+}*/
+
+function crear() {
+    Swal.fire(
+        'Usuario *NOMMBRE* creado con éxito',
+        'Haga click para continuar',
+        'success'
+    )
+};
+
+function editar() {
+    Swal.fire(
+        'Usuario *NOMMBRE* creado con éxito',
+        'Haga click para continuar',
+        'success'
+    )
+};
