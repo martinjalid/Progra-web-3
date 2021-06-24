@@ -31,8 +31,8 @@
         });
     }
 
-    const existeNumero = async numero => {
-        return $.get("/Clientes/ExisteNumero?numero=" + numero, response => (response));
+    const existenumero = async numero => {
+       return $.get("/clientes/existenumero?numero=" + numero, response => (response));
     }
 
     const validarForm = () => {
