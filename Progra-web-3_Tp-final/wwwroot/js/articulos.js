@@ -69,9 +69,21 @@ function filtro_codigo() {
 };
 
 
+$("#guardar").click(() => {
+    const data = collectData();
+
+    guardar(data, () => {
+        window.location.href = "/Articulos/NuevoArticulo";
+    });
+});
+
+
+
 function eliminar() {
+
+    valor = $('#boton_eliminar').val();
     Swal.fire({
-        title: 'Esta seguro que desea eliminar el articulo *NOMBRE*',
+        title: 'Esta seguro que desea eliminar el articulo: ' + valor,
         text: "Esta acción no se podrá revertir",
         icon: 'warning',
         showCancelButton: true,
@@ -79,13 +91,23 @@ function eliminar() {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sí, eliminar'
     }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Eliminado!',
-                'El articulo ha sido borrado',
-                'success'
-            )
-        }
+        $.ajax({
+            url: "/Articulos/Eliminar/1",
+            success: response => {
+                Swal.fire(
+                    'Eliminado!',
+                    'El articulo ha sido borrado',
+                    'success'
+                ).then((result) => {
+
+                    window.location = "/Articulos"
+                })
+            }
+            ,
+            error: error => {
+                console.log(error);
+            }
+        });
     })
 };
 
@@ -106,3 +128,4 @@ function editar() {
         'success'
     )
 };
+
