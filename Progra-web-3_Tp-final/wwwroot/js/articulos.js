@@ -156,15 +156,6 @@ function eliminar() {
 };
 
 
-function crear() {
-    Swal.fire(
-        'Articulo *DESCRIPCION* creado con éxito',
-        'Haga click para continuar',
-        'success'
-    )
-};
-
-
 function editar() {
     Swal.fire(
         'Articulo *DESCRIPCION* modificado con éxito',
