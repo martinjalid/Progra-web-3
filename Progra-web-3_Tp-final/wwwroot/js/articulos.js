@@ -118,6 +118,56 @@ $(document).ready(() => {
             })
         })
     };
+
+    $("#editar").click(() => {
+        const data = collectData2();
+
+        editar(data, () => {
+            window.location.href = "/Articulos";
+        });
+    });
+
+    const collectData2 = () => {
+        const data = {};
+
+        $(".articulos-form :input").each(function () {
+            data[this.id] = $(this).val();
+        });
+
+        return data;
+    };
+
+
+
+    async function editar(data, callback) {
+        Swal.fire(
+            'Articulo *DESCRIPCION* modificado con éxito',
+            'Haga click para continuar',
+            'success'
+        ).then((result) => {
+            $.ajax({
+                type: "POST",
+                url: "/Articulos/EditarArticulo",
+                data,
+                success: response => {
+                    console.log(response);
+                    callback();
+                },
+                error: error => {
+                    console.log(error);
+                }
+            })
+        })
+    };
+
+
+
+
+
+
+
+
+
 });
 
 
