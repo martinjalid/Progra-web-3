@@ -69,12 +69,49 @@ function filtro_codigo() {
 };
 
 
-$("#guardar").click(() => {
-    const data = collectData();
+$(document).ready(() => {
+    $("#guardar").click(() => {
+        const data = collectData();
 
-    guardar(data, () => {
-        window.location.href = "/Articulos/NuevoArticulo";
+        guardar(data, () => {
+            window.location.href = "/Articulos";
+        });
     });
+
+    $("#guardar_y_limpiar").click(() => {
+        const data = collectData();
+        guardar(data, limpiarForm);
+    });
+
+    const limpiarForm = () => {
+        $(".articulos-form :input").each(function () {
+            $(this).val("");
+        });
+    }
+
+    const collectData = () => {
+        const data = {};
+
+        $(".articulos-form :input").each(function () {
+            data[this.id] = $(this).val();
+        });
+
+        return data;
+    };
+
+    async function guardar(data, callback) {
+        $.ajax({
+            url: "/Articulos/Alta",
+            data,
+            success: response => {
+                console.log(response);
+                callback();
+            },
+            error: error => {
+                console.log(error);
+            }
+        })
+    };
 });
 
 
