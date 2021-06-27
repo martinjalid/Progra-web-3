@@ -100,19 +100,26 @@ $(document).ready(() => {
     };
 
     async function guardar(data, callback) {
-        $.ajax({
-            url: "/Articulos/Alta",
-            data,
-            success: response => {
-                console.log(response);
-                callback();
-            },
-            error: error => {
-                console.log(error);
-            }
+        Swal.fire(
+            'Articulo *DESCRIPCION* creado con éxito',
+            'Haga click para continuar',
+            'success'
+        ).then((result) => {
+            $.ajax({
+                url: "/Articulos/Alta",
+                data,
+                success: response => {
+                    console.log(response);
+                    callback();
+                },
+                error: error => {
+                    console.log(error);
+                }
+            })
         })
     };
 });
+
 
 
 
@@ -165,4 +172,3 @@ function editar() {
         'success'
     )
 };
-
