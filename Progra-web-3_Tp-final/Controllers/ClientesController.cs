@@ -29,15 +29,27 @@ namespace Progra_web_3_Tp_final.Controllers
             return View();
         }
 
-        public ActionResult Alta(Cliente cliente)
+        public ActionResult EditarCliente(int id)
         {
-             _clienteServicio.Alta(cliente);
-            return Redirect("/Clientes");
+            return View(_clienteServicio.ObtenerPorId(id));
+        }
+
+        public StatusCodeResult Alta(Cliente cliente)
+        {
+            _clienteServicio.Alta(cliente);
+            return Ok();
+        }
+
+        public StatusCodeResult Eliminar(int id) {
+            Cliente cliente = _clienteServicio.ObtenerPorId(id);
+            _clienteServicio.Eliminar(cliente);
+
+            return Ok();
         }
 
         public Boolean ExisteNumero(int numero)
         {
-            return false;
+            return context.Clientes.Where(c => c.Numero == numero).Count() > 0;
         }
     }
 }

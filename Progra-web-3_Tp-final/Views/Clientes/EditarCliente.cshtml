@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/clientes.css" />
+<script src="~/js/clientes.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
+<div class="text-center">
+    <h3>EditarCliente</h3>
+    <form class="clientes-form">
+        <input type="hidden" class="form-control col-lg-3 mb-1 ml-1" id="id" value="@Model.IdCliente">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="nombre" placeholder="Nombre" value="@Model.Nombre">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="numero" placeholder="Numero" value="@Model.Numero">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="telefono" placeholder="Telefono" value="@Model.Telefono">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="email" placeholder="Email" value="@Model.Email">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="direccion" placeholder="Direccion" value="@Model.Direccion">
+        <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="cuit" placeholder="CUIT" value="@Model.Cuit">
+    </form>
+    <button type="button" id="guardar" class="btn btn-success">Guardar</button>
+    <button type="button" id="eliminar" class="btn btn-danger">Eliminar</button>
+    <button type="button" id="cancelar" class="btn btn-danger">Cancelar</button>
+</div>
