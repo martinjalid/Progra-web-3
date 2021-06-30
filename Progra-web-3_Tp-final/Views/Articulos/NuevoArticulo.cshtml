@@ -1,23 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Nuevo Articulo";
 }
 <script src="~/js/articulos.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="mt-4">
 
-    <form action="../../Articulos/Alta" method="post">
-        <div>
-            <input type="text" class="form-control col-lg-3 mb-2" id="cod_art" name="Codigo" placeholder="Código" required>
-            <input type="text" class="form-control col-lg-3" id="descrip_art" name="Descripcion" placeholder="Descripción" required>
-        </div>
-
-        <button type="submit" class="btn btn-success mt-2" onclick="crear()">Guardar</button>
+    <form class="articulos-form">
+        <input type="text" class="form-control col-lg-3 mb-2" id="Codigo" placeholder="Código">
+        <input type="text" class="form-control col-lg-3" id="Descripcion" placeholder="Descripción">
     </form>
-
+    <button type="button" class="btn btn-success mt-2" id="guardar">Guardar</button>
 
     <div class="text-center mt-2 d-flex">
-        <button type="button" class="btn btn-success mr-2">Guardar y crear otro</button>
+        <button type="button" class="btn btn-success mr-2" id="guardar_y_limpiar">Guardar y crear otro</button>
         <div>
             <form action="../../Articulos" method="post">
                 <button type="submit" class="btn btn-danger">Cancelar</button>

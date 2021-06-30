@@ -69,9 +69,115 @@ function filtro_codigo() {
 };
 
 
+$(document).ready(() => {
+    $("#guardar").click(() => {
+        const data = collectData();
+
+        guardar(data, () => {
+            window.location.href = "/Articulos";
+        });
+    });
+
+    $("#guardar_y_limpiar").click(() => {
+        const data = collectData();
+        guardar(data, limpiarForm);
+    });
+
+    const limpiarForm = () => {
+        $(".articulos-form :input").each(function () {
+            $(this).val("");
+        });
+    }
+
+    const collectData = () => {
+        const data = {};
+
+        $(".articulos-form :input").each(function () {
+            data[this.id] = $(this).val();
+        });
+
+        return data;
+    };
+
+    async function guardar(data, callback) {
+        Swal.fire(
+            'Articulo *DESCRIPCION* creado con éxito',
+            'Haga click para continuar',
+            'success'
+        ).then((result) => {
+            $.ajax({
+                url: "/Articulos/Alta",
+                data,
+                success: response => {
+                    console.log(response);
+                    callback();
+                },
+                error: error => {
+                    console.log(error);
+                }
+            })
+        })
+    };
+
+    $("#editar").click(() => {
+        const data = collectData2();
+
+        editar(data, () => {
+            window.location.href = "/Articulos";
+        });
+    });
+
+    const collectData2 = () => {
+        const data = {};
+
+        $(".articulos-form :input").each(function () {
+            data[this.id] = $(this).val();
+        });
+
+        return data;
+    };
+
+
+
+    async function editar(data, callback) {
+        Swal.fire(
+            'Articulo *DESCRIPCION* modificado con éxito',
+            'Haga click para continuar',
+            'success'
+        ).then((result) => {
+            $.ajax({
+                type: "POST",
+                url: "/Articulos/EditarArticulo",
+                data,
+                success: response => {
+                    console.log(response);
+                    callback();
+                },
+                error: error => {
+                    console.log(error);
+                }
+            })
+        })
+    };
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
 function eliminar() {
+
+    valor = $('#boton_eliminar').val();
     Swal.fire({
-        title: 'Esta seguro que desea eliminar el articulo *NOMBRE*',
+        title: 'Esta seguro que desea eliminar el articulo: ' + valor,
         text: "Esta acción no se podrá revertir",
         icon: 'warning',
         showCancelButton: true,
@@ -79,23 +185,24 @@ function eliminar() {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sí, eliminar'
     }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Eliminado!',
-                'El articulo ha sido borrado',
-                'success'
-            )
-        }
+        $.ajax({
+            url: "/Articulos/Eliminar/1",
+            success: response => {
+                Swal.fire(
+                    'Eliminado!',
+                    'El articulo ha sido borrado',
+                    'success'
+                ).then((result) => {
+
+                    window.location = "/Articulos"
+                })
+            }
+            ,
+            error: error => {
+                console.log(error);
+            }
+        });
     })
-};
-
-
-function crear() {
-    Swal.fire(
-        'Articulo *DESCRIPCION* creado con éxito',
-        'Haga click para continuar',
-        'success'
-    )
 };
 
 

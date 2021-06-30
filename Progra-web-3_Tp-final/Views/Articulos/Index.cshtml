@@ -1,6 +1,6 @@
 ﻿@model List<Progra_web_3_Tp_final.Models.Articulo>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Articulos";
 }
 <link rel="stylesheet" href="~/css/articulos.css" />
 <script src="~/js/articulos.js"></script>
@@ -44,9 +44,9 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="../../Articulos/Eliminar/@art.IdArticulo" method="post">
-                                    <button type="submit" onclick="eliminar()" class="btn btn-danger">Eliminar</button>
-                                    </form>
+                                    <!-- <form action="../../Articulos/Eliminar/@art.IdArticulo" method="post"> -->
+                                    <button type="submit" onclick="eliminar()" id="boton_eliminar" value="@art.Descripcion" class="btn btn-danger">Eliminar</button>
+                                    <!--    </form>-->
                                 </td>
                             </tr>
                         }

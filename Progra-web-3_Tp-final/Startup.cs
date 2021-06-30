@@ -31,7 +31,7 @@ namespace Progra_web_3_Tp_final
                 options.Cookie.Name = ".MiAPP.Session";
                 options.IdleTimeout = TimeSpan.FromSeconds(60);
             });
-
+       
 
         }
 
@@ -61,7 +61,7 @@ namespace Progra_web_3_Tp_final
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Ingresar}/{action=Index}/{id?}");
             });
         }
     }
