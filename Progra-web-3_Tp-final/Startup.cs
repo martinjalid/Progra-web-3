@@ -24,14 +24,14 @@ namespace Progra_web_3_Tp_final
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-       /*     //En este caso se usa la memoria del propio servidor (ver si se puede cambiar).
+            //En este caso se usa la memoria del propio servidor (ver si se puede cambiar).
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
                 options.Cookie.Name = ".MiAPP.Session";
                 options.IdleTimeout = TimeSpan.FromSeconds(60);
             });
-       */
+
 
         }
 
