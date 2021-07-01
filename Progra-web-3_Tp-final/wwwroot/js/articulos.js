@@ -100,13 +100,14 @@ $(document).ready(() => {
     };
 
     async function guardar(data, callback) {
+        var descripcion = $("#Descripcion").val();
         Swal.fire(
-            'Articulo *DESCRIPCION* creado con éxito',
+            `Articulo ${descripcion} creado con éxito`,
             'Haga click para continuar',
             'success'
         ).then((result) => {
             $.ajax({
-                url: "/Articulos/Alta",
+                url: "/Articulos/NuevoArticulo",
                 data,
                 success: response => {
                     console.log(response);
@@ -118,6 +119,10 @@ $(document).ready(() => {
             })
         })
     };
+
+    $("#cancelar").click(() => {
+        window.location.href = "/Articulos";
+    });
 
     $("#editar").click(() => {
         const data = collectData2();
@@ -140,8 +145,9 @@ $(document).ready(() => {
 
 
     async function editar(data, callback) {
+        var descripcion = $("#Descripcion").val();
         Swal.fire(
-            'Articulo *DESCRIPCION* modificado con éxito',
+            `Articulo ${descripcion} modificado con exito`,
             'Haga click para continuar',
             'success'
         ).then((result) => {
@@ -161,17 +167,12 @@ $(document).ready(() => {
     };
 
 
-
-
-
-
-
-
-
 });
 
 
-
+$(".eliminar_articulo").click(event => {
+    console.log(this)
+})
 
 function eliminar() {
 
@@ -203,13 +204,4 @@ function eliminar() {
             }
         });
     })
-};
-
-
-function editar() {
-    Swal.fire(
-        'Articulo *DESCRIPCION* modificado con éxito',
-        'Haga click para continuar',
-        'success'
-    )
 };

@@ -23,17 +23,22 @@ namespace Progra_web_3_Tp_final.Controllers
         {
             return View(context.Articulos.ToList());
         }
-
         
+
         public ActionResult NuevoArticulo()
         {
             return View();
         }
-       
-       public ActionResult Alta(Articulo art)
+
+        [HttpPost]
+        public ActionResult NuevoArticulo(Articulo art)
         {
-            _articulosServicio.Alta(art);
-            return Redirect("/Articulos");
+            if (ModelState.IsValid)
+            {
+                _articulosServicio.Alta(art);
+                return Redirect("/Articulos");
+            }
+            return View(art);
         }
 
         public ActionResult EditarArticulo(int id)
