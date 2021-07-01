@@ -36,7 +36,7 @@ namespace Progra_web_3_Tp_final.Controllers
             if (ModelState.IsValid)
             {
                 _articulosServicio.Alta(art);
-                return RedirectToAction("/Articulos");
+                return Redirect("/Articulos");
             }
             return View(art);
         }

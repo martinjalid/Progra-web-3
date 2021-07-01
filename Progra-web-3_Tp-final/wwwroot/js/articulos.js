@@ -120,6 +120,10 @@ $(document).ready(() => {
         })
     };
 
+    $("#cancelar").click(() => {
+        window.location.href = "/Articulos";
+    });
+
     $("#editar").click(() => {
         const data = collectData2();
 
@@ -201,4 +205,3 @@ function eliminar() {
         });
     })
 };
-

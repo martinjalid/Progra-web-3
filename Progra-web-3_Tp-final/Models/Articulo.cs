@@ -15,10 +15,10 @@ namespace Progra_web_3_Tp_final.Models
 
         
         public int IdArticulo { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Por favor ingrese un código")]
         [StringLength(50)]
         public string Codigo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Por favor ingrese un código")]
         [StringLength(300)]
         public string Descripcion { get; set; }
         public DateTime FechaCreacion { get; set; }
