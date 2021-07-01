@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,8 +13,13 @@ namespace Progra_web_3_Tp_final.Models
             PedidoArticulos = new HashSet<PedidoArticulo>();
         }
 
+        
         public int IdArticulo { get; set; }
+        [Required]
+        [StringLength(50)]
         public string Codigo { get; set; }
+        [Required]
+        [StringLength(300)]
         public string Descripcion { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime? FechaModificacion { get; set; }

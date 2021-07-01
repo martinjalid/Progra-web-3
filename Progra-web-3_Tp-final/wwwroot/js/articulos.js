@@ -107,7 +107,7 @@ $(document).ready(() => {
             'success'
         ).then((result) => {
             $.ajax({
-                url: "/Articulos/Alta",
+                url: "/Articulos/NuevoArticulo",
                 data,
                 success: response => {
                     console.log(response);
@@ -163,13 +163,6 @@ $(document).ready(() => {
     };
 
 
-
-
-
-
-
-
-
 });
 
 
@@ -209,11 +202,3 @@ function eliminar() {
     })
 };
 
-
-function editar() {
-    Swal.fire(
-        'Articulo *DESCRIPCION* modificado con éxito',
-        'Haga click para continuar',
-        'success'
-    )
-};

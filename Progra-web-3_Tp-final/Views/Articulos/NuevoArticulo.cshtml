@@ -1,14 +1,19 @@
-﻿@{
+﻿@model Progra_web_3_Tp_final.Models.Articulo;
+@{
     ViewData["Title"] = "Nuevo Articulo";
 }
 <script src="~/js/articulos.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+
 <div class="mt-4">
 
-    <form class="articulos-form">
-        <input type="text" class="form-control col-lg-3 mb-2" id="Codigo" name="Codigo" placeholder="Código">
+    <form asp-action="NuevoArticulo" asp-controller="Articulos" method="post">
+
+        <input type="text" class="form-control col-lg-3 mb-2" id="Codigo" name="Codigo" asp-for="Codigo" placeholder="Código">
         <input type="text" class="form-control col-lg-3" id="Descripcion" name="Descripcion" placeholder="Descripción">
+
+        <!--  <button type="submit" class="btn btn-success mt-2">Guardar</button> -->
     </form>
     <button type="button" class="btn btn-success mt-2" id="guardar">Guardar</button>
 
@@ -22,3 +27,7 @@
     </div>
 </div>
 
+@section Scripts
+{
+    <partial name="/Views/Shared/_ValidationScriptsPartial.cshtml" />
+}
