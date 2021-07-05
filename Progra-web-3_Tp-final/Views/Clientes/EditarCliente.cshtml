@@ -5,9 +5,10 @@
 <script src="~/js/clientes.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="text-center">
-    <h3>EditarCliente</h3>
+    <h3>Editar Cliente</h3>
     <form class="clientes-form">
         <input type="hidden" class="form-control col-lg-3 mb-1 ml-1" id="id" value="@Model.IdCliente">
         <input type="text" class="form-control col-lg-3 mb-1 ml-1" id="nombre" placeholder="Nombre" value="@Model.Nombre">
