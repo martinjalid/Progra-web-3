@@ -2,3 +2,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+.articulos-form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin: 3% 0;
+}

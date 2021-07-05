@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Progra_web_3_Tp_final.Models.Pedido>
+@{    
     ViewData["Title"] = "Home Page";
 }
 <link rel="stylesheet" href="~/css/pedidos.css" />
@@ -13,16 +14,16 @@
         </form>
         <div class="filtros">
             <select aria-label="Default select example">
+                @*@foreach (var cliente in Model)
+        {
+            <option value="@cliente.clientes" selected>@cliente</option>
+        }*@
                 <option selected>Cliente</option>
-                <option value="1">Cliente 1</option>
-                <option value="2">Cliente 2</option>
-                <option value="3">Cliente 3</option>
+                <option value="1">Client 1</option>
             </select>
             <select aria-label="Default select example">
                 <option selected>Estado</option>
                 <option value="1">Estado 1</option>
-                <option value="2">Estado 2</option>
-                <option value="3">Estado 3</option>
             </select>
             <div class="form-group form-check col-lg-5">
                 <label class="form-check-label col-lg-7" for="excluir_eliminados">Solo últimos 2 meses</label>
@@ -32,168 +33,25 @@
                 </div>
             </div>
         </div>
-        <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Pedido</th>
-                    <th>Estado</th>
-                    <th>Ult Modificacion</th>
-                    <th>Ver</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-                <tr>
-                    <td>Sanitarios Rodriguez - #20</td>
-                    <td>Abierto</td>
-                    <td>Hace 2 minutos (Damian)</td>
-                    <td><a href="#">Ver</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Pedido</th>
+                <th>Estado</th>
+                <th>Ult Modificacion</th>
+                <th>Ver</th>
+            </tr>
+        </thead>
+        @foreach (var pedido in Model)
+        {
+            <tr>
+                <td>@pedido.IdPedido</td>
+                <td>@pedido.IdEstado</td>
+                <td>@pedido.FechaModificacion</td>
+                <td><a href="/Pedidos/EditarPedido">Ver</a></td>
+            </tr>
+         }
+    </table>
+ </div>
+
    
