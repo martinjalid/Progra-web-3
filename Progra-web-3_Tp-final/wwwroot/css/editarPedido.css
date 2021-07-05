@@ -1,0 +1,83 @@
+﻿
+.filtros .form-group {
+        margin-left: 700px;
+    }
+
+/*Nuevo pedido*/
+.nuevoPedidos-filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nuevoPedidos-filters a{
+    position:absolute;
+}
+
+.selectCliente {
+    width: 1110px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+    .selectCliente select {
+        width: 230px;
+        float: left;
+        border-radius: 10px;
+        height: 38px;
+    }
+.selectDescripcion {
+    margin-top: 100px;
+    display: flex;
+}
+    .selectDescripcion select {
+        width: 230px;
+        border-radius: 10px;
+    }
+
+    .selectDescripcion input{
+        margin-left: 30px;
+    }
+
+    .selectDescripcion form {
+        margin-left: 30px;
+    }
+
+.selectCliente .form-group {
+    margin-left: 700px;
+}
+
+nuevoPedidos-filters button {
+    height: 50px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+#example {
+    margin-top: 250px;
+}
+
+#example_wrapper {
+    margin-top: 50px;
+}
+
+.cajaComentarios {
+    width: 1500px;
+    height: 302px;
+}
+
+    .cajaComentarios label {
+        position: absolute;
+    }
+
+    .cajaComentarios textarea {
+        margin-top: 30px;
+        margin-right: 1500px;
+    }
+
+.botonesFinal{
+    display:flex;
+}
+
+.botonesFinal button{
+    margin: 10px;
+}

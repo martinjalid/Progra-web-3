@@ -1,0 +1,19 @@
+﻿.clientes-filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clientes-form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin: 3% 0;
+}
+
+button a {
+    color: white !important;
+}
+
+.fecha-borrado {
+    display: none;
+}

@@ -1,0 +1,27 @@
+﻿@model Progra_web_3_Tp_final.Models.Articulo;
+@{
+    ViewData["Title"] = "Editar Articulo";
+}
+<script src="~/js/articulos.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<div class="mt-4">
+
+    <form class="articulos-form">
+        <input type="hidden" id="IdArticulo" name="IdArticulo" value="@Model.IdArticulo" />
+        <div>
+            <input type="text" class="form-control col-lg-3 mb-2" id="Codigo" name="Codigo" placeholder="Código" required value="@Model.Codigo">
+            <input type="text" class="form-control col-lg-3" id="Descripcion" name="Descripcion" placeholder="Descripción" required value="@Model.Descripcion">
+        </div>
+
+
+    </form>
+    <button type="button" class="btn btn-success mt-2" id="editar">Modificar</button>
+
+
+    <div class="text-center mt-2 d-flex">
+        <form action="../../Articulos" method="post">
+            <button type="submit" class="btn btn-danger">Cancelar</button>
+        </form>
+    </div>
+</div>

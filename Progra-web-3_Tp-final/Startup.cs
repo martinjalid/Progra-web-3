@@ -24,6 +24,15 @@ namespace Progra_web_3_Tp_final
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //En este caso se usa la memoria del propio servidor (ver si se puede cambiar).
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".MiAPP.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(60);
+            });
+       
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,11 +55,13 @@ namespace Progra_web_3_Tp_final
 
             app.UseAuthorization();
 
+            app.UseSession();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Ingresar}/{action=Index}/{id?}");
             });
         }
     }
