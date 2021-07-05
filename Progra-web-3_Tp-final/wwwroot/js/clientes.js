@@ -194,6 +194,7 @@ function filtro_numero() {
     }
 };
 
+
 function filtro_eliminados() {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
